@@ -15,11 +15,11 @@
 :root {
   --white: #FFFFFF;
   --dullRed: #f2dede;
-  --red: #e27876;
+  --red: #e63e3e;
   --raspberry: #d14f72;
   --blue: #7fa9b8;
   --brightBlue: #3886cf;
-  --grey: #f4f4f4;
+  --grey: #cdcdcd;
   --green: #709b73;
 }
 
@@ -32,12 +32,11 @@ body {
   height: 100vh;
   background-position: center;
   background-size: cover;
-  padding: 0 20px;
+  padding: 20px;
 }
 
 h1 {
-  font-weight: bold;
-  font-size: 35px;
+  font-size: 25px;
 }
 
 h2 {
