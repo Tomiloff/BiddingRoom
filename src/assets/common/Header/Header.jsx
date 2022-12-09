@@ -3,7 +3,6 @@ import styles from "./Header.module.css";
 
 
 const Header = ({header, currentDate, currentTime}) => {
-  debugger;
   return (
     <div className={styles.header}>
       <div className={styles.title}>
