@@ -1,4 +1,6 @@
 import { connect } from "react-redux";
+import { compose } from "redux";
+import { withDateAndTime } from "../../../utils/withDateAndTime";
 import Header from "./Header";
 
 
@@ -9,4 +11,4 @@ const mapStateToProps = (state) => {
 };
 
 
-export default connect(mapStateToProps, null)(Header);
+export default compose(withDateAndTime, connect(mapStateToProps, null))(Header);
