@@ -22,19 +22,72 @@ const Room = () => {
               <li>Действия:</li>
             </ul>
           </div>
-
-          <div className={styles.participant}>
-            <div className={styles.timer}>
-              <time>00:02:00</time>
+          <div className={styles.competitionArea}>
+            <div className={styles.participant}>
+              <div className={styles.timer}>
+                <time>00:02:00</time>
+              </div>
+              <h3 className={styles.parametersSubTitle}>Участник №1</h3>
+              <ul className={styles.participantTable}>
+                <li className={styles.termsStandard}>-</li>
+                <li>80</li>
+                <li>24</li>
+                <li>30%</li>
+                <li className={styles.price}>3,700,000 руб<br/>-25,000 руб<br/>2,475,000 руб</li>
+              </ul>
             </div>
-            <h3 className={styles.parametersSubTitle}>Участник №1</h3>
-            <ul className={styles.participantTable}>
-              <li className={styles.termsStandard}>-</li>
-              <li>80</li>
-              <li>24</li>
-              <li>30%</li>
-              <li className={styles.price}>3,700,000 руб<br/>-25,000 руб<br/>2,475,000 руб</li>
-            </ul>
+            <div className={styles.participant}>
+              <div className={styles.timer}>
+                <time>00:02:00</time>
+              </div>
+              <h3 className={styles.parametersSubTitle}>Участник №1</h3>
+              <ul className={styles.participantTable}>
+                <li className={styles.termsStandard}>-</li>
+                <li>80</li>
+                <li>24</li>
+                <li>30%</li>
+                <li className={styles.price}>3,700,000 руб<br/>-25,000 руб<br/>2,475,000 руб</li>
+              </ul>
+            </div>
+            <div className={styles.participant}>
+              <div className={styles.timer}>
+                <time>00:02:00</time>
+              </div>
+              <h3 className={styles.parametersSubTitle}>Участник №1</h3>
+              <ul className={styles.participantTable}>
+                <li className={styles.termsStandard}>-</li>
+                <li>80</li>
+                <li>24</li>
+                <li>30%</li>
+                <li className={styles.price}>3,700,000 руб<br/>-25,000 руб<br/>2,475,000 руб</li>
+              </ul>
+            </div>
+            <div className={styles.participant}>
+              <div className={styles.timer}>
+                <time>00:02:00</time>
+              </div>
+              <h3 className={styles.parametersSubTitle}>Участник №1</h3>
+              <ul className={styles.participantTable}>
+                <li className={styles.termsStandard}>-</li>
+                <li>80</li>
+                <li>24</li>
+                <li>30%</li>
+                <li className={styles.price}>3,700,000 руб<br/>-25,000 руб<br/>2,475,000 руб</li>
+              </ul>
+            </div>
+            <div className={styles.participant}>
+              <div className={styles.timer}>
+                <time>00:02:00</time>
+              </div>
+              <h3 className={styles.parametersSubTitle}>Участник №1</h3>
+              <ul className={styles.participantTable}>
+                <li className={styles.termsStandard}>-</li>
+                <li>80</li>
+                <li>24</li>
+                <li>30%</li>
+                <li className={styles.price}>3,700,000 руб<br/>-25,000 руб<br/>2,475,000 руб</li>
+              </ul>
+            </div>
           </div>
         </div>
 
