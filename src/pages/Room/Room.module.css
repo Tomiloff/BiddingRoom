@@ -92,7 +92,7 @@
 
 .participantTable {
   text-align: center;
-  border-right: 1px solid var(--grey);
+  border-right: 2px solid var(--grey);
 }
 
 .сontrolPanel {
@@ -131,6 +131,7 @@
 }
 
 ::-webkit-scrollbar {
+  width: 0;
   height: 8px;
   background-color: none;
 }
