@@ -23,6 +23,9 @@ export const withWidgetTimer = (Component) => {
       };
     }, [isCounting]);
 
+    const handleStart = () => {
+      setIsCounting(true);
+    };
 
     const handleUpdate = () => {
       setIsCounting(true);
@@ -31,10 +34,11 @@ export const withWidgetTimer = (Component) => {
 
     const handleStop = () => {
       setIsCounting(false);
+      settimeLeft(2 * 60);
     };
 
     return (
-      <Component minutes={minutes} seconds={seconds} handleUpdate={handleUpdate} handleStop={handleStop} />
+      <Component minutes={minutes} seconds={seconds} handleStart={handleStart} handleUpdate={handleUpdate} handleStop={handleStop} isCounting={isCounting} />
     );
   };
 

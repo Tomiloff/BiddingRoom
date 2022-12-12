@@ -1,11 +1,12 @@
+import classNames from "classnames";
 import Timer from "../../components/room/widgets/Timer";
 import styles from "../../pages/Room/Room.module.css";
 
 
-const ParticipantСard = ({minutes, seconds}) => {
+const ParticipantСard = ({minutes, seconds, isCounting}) => {
   return (
-    <div className={styles.participant}>
-      <Timer minutes={minutes} seconds={seconds} />
+    <div className={classNames(styles.participant, !isCounting ? styles.adaptation : "")}>
+      <Timer minutes={minutes} seconds={seconds} isCounting={isCounting} />
       <h3 className={styles.parametersSubTitle}>Участник №1</h3>
       <ul className={styles.participantTable}>
         <li className={styles.termsStandard}>-</li>

@@ -2,10 +2,10 @@ import { withWidgetTimer } from "../../components/room/widgets/withWidgetTimer";
 import Room from "./Room";
 
 
-const RoomContainer = ({handleUpdate, handleStop, minutes, seconds}) => {
+const RoomContainer = ({handleStart, handleUpdate, handleStop, minutes, seconds, isCounting}) => {
 
   return (
-    <Room handleUpdate={handleUpdate} handleStop={handleStop} minutes={minutes} seconds={seconds} />
+    <Room handleStart={handleStart} handleUpdate={handleUpdate} handleStop={handleStop} minutes={minutes} seconds={seconds} isCounting={isCounting} />
   );
 };
 

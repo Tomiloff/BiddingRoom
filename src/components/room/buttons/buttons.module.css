@@ -1,3 +1,8 @@
+.btnStart {
+  background: var(--green);
+  color: var(--white);
+}
+
 .btnUpdate {
   background: var(--brightBlue);
   color: var(--white);
@@ -10,4 +15,8 @@
 
 .btnExit {
   background: var(--grey);
+}
+
+button p {
+  margin-right: 8px;
 }
