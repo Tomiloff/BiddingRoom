@@ -1,0 +1,13 @@
+.btnUpdate {
+  background: var(--brightBlue);
+  color: var(--white);
+}
+
+.btnComplete {
+  background: var(--red);
+  color: var(--white);
+}
+
+.btnExit {
+  background: var(--grey);
+}

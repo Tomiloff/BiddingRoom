@@ -19,7 +19,7 @@
 }
 
 .parameters {
-  width: 500px;
+  width: 420px;
 }
 
 .parameters,
@@ -40,7 +40,7 @@
 }
 
 .parametersSubTitle {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .parametrsTable {
@@ -78,21 +78,9 @@
   min-width: 300px;
 }
 
-.timer  {
-  background: var(--dullRed);
-  height: 58px;
-  display: flex;
-  align-items: center; 
-  justify-content: center;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  color: var(--raspberry);
-  font-weight: bold;
-}
-
+.parametrsTable,
 .participantTable {
-  text-align: center;
-  border-right: 2px solid var(--grey);
+  border-right: 1px solid var(--blue);
 }
 
 .сontrolPanel {
@@ -116,20 +104,6 @@
   box-shadow: none;
 }
 
-.btnUpdate {
-  background: var(--brightBlue);
-  color: var(--white);
-}
-
-.btnComplete {
-  background: var(--red);
-  color: var(--white);
-}
-
-.btnExit {
-  background: var(--grey);
-}
-
 ::-webkit-scrollbar {
   width: 0;
   height: 8px;
@@ -137,7 +111,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #843465;
+  background-color: var(--blue);
   border-radius: 9em;
   box-shadow: inset 1px 1px 10px #f3faf7;
 }

@@ -1,5 +1,5 @@
 import HeaderContainer from '../../assets/common/Header/HeaderContainer';
-import Room from '../../pages/Room/Room';
+import RoomContainer from '../../pages/Room/RoomContainer';
 import './App.css';
 
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="appWrapper">
       <HeaderContainer />
-      <Room/>
+      <RoomContainer/>
     </div>
   );
 }
