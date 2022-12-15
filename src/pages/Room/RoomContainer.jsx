@@ -20,4 +20,3 @@ const mapStateToProps = (state) => {
 
 
 export default compose( withWidgetTimer, connect(mapStateToProps, null)) (RoomContainer);
-

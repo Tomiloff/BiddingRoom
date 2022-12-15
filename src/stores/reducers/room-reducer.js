@@ -6,33 +6,35 @@ const initialState = {
     {
       id: 1,
       login: "user1",
-      password: "user1",
       tradingMode: false
     },
     {
       id: 2,
       login: "user2",
-      password: "user2",
       tradingMode: false
     },
     // {
     //   id: 3,
     //   login: "user3",
-    //   password: "user3",
     //   tradingMode: false
     // },
     // {
     //   id: 4,
     //   login: "user4",
-    //   password: "user4",
     //   tradingMode: false
     // },
     // {
     //   id: 5,
     //   login: "user5",
-    //   password: "user5",
     //   tradingMode: false
     // },
+  ],
+  imitationUser: [
+    {
+      id: 1,
+      login: "Testing timer",
+      tradingMode: false
+    }
   ]
 };
 

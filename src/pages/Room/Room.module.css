@@ -82,6 +82,10 @@
   padding-top: 68px;
 }
 
+.hideTable {
+  display: none;
+}
+
 .parametrsTable,
 .participantTable {
   border-right: 1px solid var(--blue);

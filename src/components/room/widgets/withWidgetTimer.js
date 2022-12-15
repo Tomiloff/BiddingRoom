@@ -5,13 +5,13 @@ import { setTradingMode } from "../../../stores/reducers/room-reducer";
 
 const mapStateToPropsForTimer = (state) => {
   return {
-    participants: state.room.participants
+    room: state.room
   }
 };
 
 export const withWidgetTimer = (Component) => {
   
-  const WidgetTimerContainer = ({participants, setTradingMode}) => {
+  const WidgetTimerContainer = ({room, setTradingMode}) => {
     const [timeLeft, setTimeLeft] = useState(1 * 60);
     const [isCounting, setIsCounting] = useState(false);
     const [actualMinutes, setActualMinutes] = useState("");
@@ -21,6 +21,11 @@ export const withWidgetTimer = (Component) => {
     const getPaadTime = (time) => time.toString().padStart(2, "0");
     const minutes = getPaadTime(Math.floor(timeLeft / 60));
     const seconds = getPaadTime(timeLeft - minutes * 60);
+
+
+    if (!room.participants.length) {
+      room.participants = room.imitationUser
+    }
 
 
     const onChangeMinutes = (actualMinutes) => {
@@ -45,17 +50,17 @@ export const withWidgetTimer = (Component) => {
 
     useEffect(() => {
       if (actualMinutes === "00" && actualSeconds === "00" ) {
-        setTradingMode(participants[counter].id, false);
+        setTradingMode(room.participants[counter].id, false);
         setCounter(c => c + 1);
-      } else if (counter === participants.length)  {
+      } else if (counter === room.participants.length)  {
         setCounter(0);
       }
-    }, [actualSeconds]);
+    }, [actualMinutes, actualSeconds]);
 
     useEffect(() => {
-      if (counter < participants.length) {
+      if (counter < room.participants.length) {
         isCounting &&
-      setTradingMode(participants[counter].id, true)
+      setTradingMode(room.participants[counter].id, true)
       }
     }, [isCounting, counter]);
 
@@ -69,12 +74,12 @@ export const withWidgetTimer = (Component) => {
       setCounter(0);
       setTimeLeft(1 * 60);
 
-      if (counter != 0) setTradingMode(participants[counter].id, false);
+      if (counter !== 0) setTradingMode(room.participants[counter].id, false);
     };
 
     const handleStop = () => {
       setIsCounting(false);
-      setTradingMode(participants[counter].id, false);
+      setTradingMode(room.participants[counter].id, false);
       setCounter(0);
       setTimeLeft(1 * 60);
     };

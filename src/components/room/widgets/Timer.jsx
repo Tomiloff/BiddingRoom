@@ -9,7 +9,7 @@ const Timer = ({minutes, seconds, tradingMode, onChangeMinutes, onChangeSeconds}
   useEffect(() => {
     onChangeSeconds(seconds);
     onChangeMinutes(minutes);
-  }, [seconds]);
+  });
   
   return(
     <div className={classNames(styles.timer, tradingMode ? styles.show : styles.hide)}>
