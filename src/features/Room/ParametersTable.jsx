@@ -2,6 +2,7 @@ import styles from "../../pages/Room/Room.module.css";
 
 
 const ParametersTable = () => {
+  
   return (
     <div className={styles.parameters}>
       <h3 className={styles.parametersTitle}>Ход</h3>

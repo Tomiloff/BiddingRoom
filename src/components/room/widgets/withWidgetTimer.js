@@ -14,24 +14,21 @@ export const withWidgetTimer = (Component) => {
   const WidgetTimerContainer = ({room, setTradingMode}) => {
     const [timeLeft, setTimeLeft] = useState(2 * 60);
     const [isCounting, setIsCounting] = useState(false);
-    const [actualMinutes, setActualMinutes] = useState("");
-    const [actualSeconds, setActualSeconds] = useState("");
+    const [actualMinutes, setActualMinutes] = useState(0);
+    const [actualSeconds, setActualSeconds] = useState(0);
     const [counter, setCounter] = useState(0);
   
     const getPaadTime = (time) => time.toString().padStart(2, "0");
     const minutes = getPaadTime(Math.floor(timeLeft / 60));
     const seconds = getPaadTime(timeLeft - minutes * 60);
 
-
     if (!room.participants.length) {
       room.participants = room.imitationUser
     }
 
-
     const onChangeMinutes = (actualMinutes) => {
       setActualMinutes(actualMinutes);
     };
-
     const onChangeSeconds = (actualSeconds) => {
       setActualSeconds(actualSeconds);
     };
@@ -48,20 +45,21 @@ export const withWidgetTimer = (Component) => {
       };
     }, [isCounting]);
 
+    const changeModeForUser = (count, status) => {
+      setTradingMode(room.participants[count].id, status);
+    };
+
     useEffect(() => {
       if (actualMinutes === "00" && actualSeconds === "00" ) {
-        setTradingMode(room.participants[counter].id, false);
-        setCounter(c => c + 1);
-      } else if (counter === room.participants.length)  {
-        setCounter(0);
-      }
+        changeModeForUser(counter, false);
+        setCounter(score => score + 1);
+      } 
+      else if (counter === room.participants.length) setCounter(0);
     }, [actualMinutes, actualSeconds]);
 
     useEffect(() => {
-      if (counter < room.participants.length) {
-        isCounting &&
-      setTradingMode(room.participants[counter].id, true)
-      }
+      if (counter < room.participants.length && isCounting)
+      changeModeForUser(counter, true);
     }, [isCounting, counter]);
 
   
@@ -69,27 +67,30 @@ export const withWidgetTimer = (Component) => {
       setIsCounting(true);
     };
 
+    const updateStopTimer = (status) => {
+      setIsCounting(status);
+      setCounter(0);
+      setTimeLeft(2 * 60);
+    };
+
     const handleUpdate = () => {
-      setIsCounting(true);
-      setCounter(0);
-      setTimeLeft(2 * 60);
-
-      if (counter !== 0) setTradingMode(room.participants[counter].id, false);
+      updateStopTimer(true);
+      if (counter !== 0) changeModeForUser(counter, false);
     };
-
     const handleStop = () => {
-      setIsCounting(false);
-      setTradingMode(room.participants[counter].id, false);
-      setCounter(0);
-      setTimeLeft(2 * 60);
+      updateStopTimer(false);
+      changeModeForUser(counter, false);
     };
-
 
     return (
-      <Component minutes={minutes} seconds={seconds} handleStart={handleStart} handleUpdate={handleUpdate} handleStop={handleStop} isCounting={isCounting} onChangeMinutes={onChangeMinutes} onChangeSeconds={onChangeSeconds} />
+      <Component minutes={minutes} seconds={seconds} 
+        handleStart={handleStart} handleUpdate={handleUpdate} 
+        handleStop={handleStop} isCounting={isCounting} 
+        onChangeMinutes={onChangeMinutes} 
+        onChangeSeconds={onChangeSeconds} />
     );
   };
 
-  
-  return connect(mapStateToPropsForTimer, {setTradingMode})(WidgetTimerContainer);
+  return connect(mapStateToPropsForTimer, {setTradingMode})
+  (WidgetTimerContainer);
 };

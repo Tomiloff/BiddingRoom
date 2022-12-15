@@ -1,22 +1,16 @@
-import { connect } from "react-redux";
-import { compose } from "redux";
-import { withWidgetTimer } from "../../components/room/widgets/withWidgetTimer";
-import Room from "./Room";
+import styles from "./Room.module.css";
+import WorkingArea from "../../features/Room/WorkingArea";
 
 
-const RoomContainer = ({handleStart, handleUpdate, handleStop, minutes, seconds, isCounting, room, onChangeMinutes, onChangeSeconds}) => {
+const Room = () => {
 
   return (
-    <Room handleStart={handleStart} handleUpdate={handleUpdate} handleStop={handleStop} minutes={minutes} seconds={seconds} isCounting={isCounting} room={room} onChangeMinutes={onChangeMinutes} onChangeSeconds={onChangeSeconds} />
+    <div className={styles.room}>
+      <h2 className={styles.notification}>Уважаемые участники, во время Вашего хода Вы можете изменить параметры торгов, укаказзных в таблице:</h2>
+      <WorkingArea />
+    </div>
   );
 };
 
 
-const mapStateToProps = (state) => {
-  return {
-    room: state.room
-  }
-};
-
-
-export default compose( withWidgetTimer, connect(mapStateToProps, null)) (RoomContainer);
+export default Room;
