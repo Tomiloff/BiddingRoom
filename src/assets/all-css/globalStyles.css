@@ -15,12 +15,13 @@
 :root {
   --white: #FFFFFF;
   --dullRed: #f2dede;
-  --red: #e27876;
+  --red: #e63e3e;
   --raspberry: #d14f72;
   --blue: #7fa9b8;
   --brightBlue: #3886cf;
-  --grey: #f4f4f4;
-  --green: #709b73;
+  --grey: #cdcdcda1;
+  --darkGrey: #838383a1;
+  --green: #69b86f;
 }
 
 
@@ -32,50 +33,21 @@ body {
   height: 100vh;
   background-position: center;
   background-size: cover;
-  padding: 0 20px;
+  padding: 5px 20px;
 }
 
 h1 {
-  font-weight: bold;
-  font-size: 35px;
+  font-size: 24px;
 }
 
 h2 {
-  font-size: 25px;
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
 }
 
 button {
   cursor: pointer;
 }
-
-/* .mask {
-  height: 100%;
-  position: fixed;
-  background-color: var(--white);
-  top: 0;
-  z-index: 5000;
-  transition: 0.6s;
-  align-items: center;
-} */
-
-/* .loader {
-  width: 85px;
-  height: 85px;
-  border: 7px solid #007aff;
-  border-radius: 50%;
-  border-left-color: #62adff;
-  border-bottom-color: #94c4f8;
-  border-right-color: #ffffff;
-  animation: loaderTop 0.8s linear infinite;
-} */
-
-/* @keyframes loaderTop {
-  100% {
-    transform: rotate(360deg);
-  }
-} */
-
-/* .hide-loader-top {
-  opacity: 0;
-} */
-

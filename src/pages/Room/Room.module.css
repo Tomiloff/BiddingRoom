@@ -1,0 +1,134 @@
+.room {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.notification {
+  background: var(--dullRed);
+  color: var(--red);
+  align-self: baseline;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.tradingWorkspace {
+  display: flex;
+}
+
+.parameters {
+  width: 420px;
+}
+
+.parameters,
+.participant {
+  text-align: center;
+}
+
+.parameters h3,
+.participant h3 {
+  color: var(--blue);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.parametersTitle {
+  padding: 20px 0;
+  margin-bottom: 10px;
+}
+
+.parametersSubTitle {
+  margin-bottom: 30px;
+}
+
+.parametrsTable {
+  text-align: left;
+}
+
+.parametrsTable li,
+.participantTable li {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.participantTable li {
+  justify-content: center;
+}
+
+.termsStandard,
+.price {
+  height: 66px;
+}
+
+.parametrsTable li:nth-child(odd),
+.participantTable li:nth-child(odd) {
+  background: var(--grey);
+}
+
+.competitionArea {
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: scroll;
+}
+
+.participant {
+  min-width: 300px;
+}
+
+.adaptation {
+  padding-top: 68px;
+}
+
+.hideTable {
+  display: none;
+}
+
+.parametrsTable,
+.participantTable {
+  border-right: 1px solid var(--darkGrey);
+  border-top: 3px solid var(--darkGrey);
+}
+
+.сontrolPanel {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.сontrolPanel button {
+  margin: 0 10px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.сontrolPanel button:hover {
+  box-shadow: 0px 0px 10px 15px rgba(34, 60, 80, 0.2) inset;
+  transition: 0.2s;
+}
+
+.сontrolPanel button:active {
+  box-shadow: none;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 8px;
+  background-color: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+  border-radius: 9em;
+  box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #253861;
+}

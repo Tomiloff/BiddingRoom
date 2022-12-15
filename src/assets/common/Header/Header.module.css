@@ -1,0 +1,19 @@
+.header {
+  color: var(--red);
+  border-bottom: 1px solid var(--grey);
+  padding: 20px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.topTitle {
+  margin-right: 10px;
+}
+
+.subTitleTop {
+  font-weight: bold;
+  margin-right: 10px;
+}

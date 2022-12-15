@@ -1,0 +1,18 @@
+.btnStart {
+  background: var(--green);
+  color: var(--white);
+}
+
+.btnUpdate {
+  background: var(--brightBlue);
+  color: var(--white);
+}
+
+.btnComplete {
+  background: var(--red);
+  color: var(--white);
+}
+
+button p {
+  margin-right: 8px;
+}
