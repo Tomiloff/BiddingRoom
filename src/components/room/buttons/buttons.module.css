@@ -13,10 +13,6 @@
   color: var(--white);
 }
 
-.btnExit {
-  background: var(--grey);
-}
-
 button p {
   margin-right: 8px;
 }

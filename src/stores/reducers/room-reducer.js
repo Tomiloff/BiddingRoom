@@ -13,21 +13,21 @@ const initialState = {
       login: "user2",
       tradingMode: false
     },
-    // {
-    //   id: 3,
-    //   login: "user3",
-    //   tradingMode: false
-    // },
-    // {
-    //   id: 4,
-    //   login: "user4",
-    //   tradingMode: false
-    // },
-    // {
-    //   id: 5,
-    //   login: "user5",
-    //   tradingMode: false
-    // },
+    {
+      id: 3,
+      login: "user3",
+      tradingMode: false
+    },
+    {
+      id: 4,
+      login: "user4",
+      tradingMode: false
+    },
+    {
+      id: 5,
+      login: "user5",
+      tradingMode: false
+    },
   ],
   imitationUser: [
     {

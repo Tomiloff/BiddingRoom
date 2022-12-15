@@ -12,7 +12,7 @@ const mapStateToPropsForTimer = (state) => {
 export const withWidgetTimer = (Component) => {
   
   const WidgetTimerContainer = ({room, setTradingMode}) => {
-    const [timeLeft, setTimeLeft] = useState(1 * 60);
+    const [timeLeft, setTimeLeft] = useState(2 * 60);
     const [isCounting, setIsCounting] = useState(false);
     const [actualMinutes, setActualMinutes] = useState("");
     const [actualSeconds, setActualSeconds] = useState("");
@@ -40,7 +40,7 @@ export const withWidgetTimer = (Component) => {
     useEffect(() => {
       const interval = setInterval(() => {
         isCounting && 
-        setTimeLeft((timeLeft) => (timeLeft >= 1 ? timeLeft - 1 : 1 * 60));
+        setTimeLeft((timeLeft) => (timeLeft >= 1 ? timeLeft - 1 : 2 * 60));
       }, 1000);
 
       return () => {
@@ -72,7 +72,7 @@ export const withWidgetTimer = (Component) => {
     const handleUpdate = () => {
       setIsCounting(true);
       setCounter(0);
-      setTimeLeft(1 * 60);
+      setTimeLeft(2 * 60);
 
       if (counter !== 0) setTradingMode(room.participants[counter].id, false);
     };
@@ -81,7 +81,7 @@ export const withWidgetTimer = (Component) => {
       setIsCounting(false);
       setTradingMode(room.participants[counter].id, false);
       setCounter(0);
-      setTimeLeft(1 * 60);
+      setTimeLeft(2 * 60);
     };
 
 
