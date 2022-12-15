@@ -3,11 +3,11 @@ import Timer from "../../components/room/widgets/Timer";
 import styles from "../../pages/Room/Room.module.css";
 
 
-const ParticipantСard = ({minutes, seconds, isCounting}) => {
+const ParticipantСard = ({minutes, seconds, id, login, tradingMode, onChangeMinutes, onChangeSeconds}) => {
   return (
-    <div className={classNames(styles.participant, !isCounting ? styles.adaptation : "")}>
-      <Timer minutes={minutes} seconds={seconds} isCounting={isCounting} />
-      <h3 className={styles.parametersSubTitle}>Участник №1</h3>
+    <div id={id} className={classNames(styles.participant, !tradingMode ? styles.adaptation : "")}>
+      <Timer minutes={minutes} seconds={seconds} tradingMode={tradingMode} onChangeSeconds={onChangeSeconds} onChangeMinutes={onChangeMinutes} />
+      <h3 className={styles.parametersSubTitle}>{login}</h3>
       <ul className={styles.participantTable}>
         <li className={styles.termsStandard}>-</li>
         <li>80</li>
