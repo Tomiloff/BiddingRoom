@@ -52,7 +52,7 @@ export const withWidgetTimer = (Component) => {
     useEffect(() => {
       if (actualMinutes === "00" && actualSeconds === "00" ) {
         changeModeForUser(counter, false);
-        setCounter(score => score + 1);
+        setCounter(prev => prev + 1);
       } 
       else if (counter === room.participants.length) setCounter(0);
     }, [actualMinutes, actualSeconds]);
