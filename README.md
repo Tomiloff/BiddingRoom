@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/assets/all-images/global-img/TopCover.svg" alt="Project-logo" title="BiddingRoom" width="800px">
+  <img src="src/assets/all-images/global-img/TopCover.svg" alt="Project-logo" title="BiddingRoom" width="800px">
 </p>
 
 # *BiddingRoom*
