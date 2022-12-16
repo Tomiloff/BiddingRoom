@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/BiddingRoom/static/css/main.146c5e9f.css",
-    "main.js": "/BiddingRoom/static/js/main.b597d046.js",
+    "main.js": "/BiddingRoom/static/js/main.de7924fc.js",
     "static/media/OpenSansLight.svg": "/BiddingRoom/static/media/OpenSansLight.bad748acc558e595ef2d.svg",
     "static/media/topBackground.jpg": "/BiddingRoom/static/media/topBackground.4ce204013b6fda25a522.jpg",
     "static/media/OpenSansLight.eot": "/BiddingRoom/static/media/OpenSansLight.3de599c4a5303d0d2994.eot",
@@ -14,10 +14,10 @@
     "static/media/timerForWidget.svg": "/BiddingRoom/static/media/timerForWidget.5df3f31754601d9364b8703088ff764e.svg",
     "static/media/auction.svg": "/BiddingRoom/static/media/auction.014e8aec946295e39ec0937c3a68f67e.svg",
     "main.146c5e9f.css.map": "/BiddingRoom/static/css/main.146c5e9f.css.map",
-    "main.b597d046.js.map": "/BiddingRoom/static/js/main.b597d046.js.map"
+    "main.de7924fc.js.map": "/BiddingRoom/static/js/main.de7924fc.js.map"
   },
   "entrypoints": [
     "static/css/main.146c5e9f.css",
-    "static/js/main.b597d046.js"
+    "static/js/main.de7924fc.js"
   ]
 }
