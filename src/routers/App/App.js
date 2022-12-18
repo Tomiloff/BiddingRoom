@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderContainer from '../../assets/common/Header/HeaderContainer';
+import HeaderContainer from '../../Header/HeaderContainer';
 import RoomContainer from '../../pages/Room/RoomContainer';
 import './App.css';
 

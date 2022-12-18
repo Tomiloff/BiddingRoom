@@ -1,4 +1,4 @@
-import HeaderTime from "../../../features/HeaderTime/HeaderTime";
+import HeaderTime from "../features/HeaderTime/HeaderTime";
 import styles from "./Header.module.css";
 
 
