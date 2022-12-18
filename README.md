@@ -12,6 +12,7 @@
 * [Запуск проекта](#launch)
 * [Функционал проекта](#functionality)
 * [Структура проекта](#structure)
+* [Deployed by GitHub Pages](#deployed)
 * [Полученные опыт и навыки](#experience)
 
 <a name="about"></a>
@@ -74,6 +75,10 @@ app
     ├── utils                   - утилиты и функции
     └── index.js                - точка входа в приложение
 ```
+
+<a name="deployed"></a>
+### Deployed by GitHub Pages
+🟢 [Войти в комнату](https://tomiloff.github.io/BiddingRoom)
 
 <a name="experience"></a>
 ### Полученные опыт и навыки
